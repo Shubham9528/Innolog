@@ -1,15 +1,28 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from './assets/vite.svg'
-// import heroImg from './assets/hero.png'
-import './index.css'
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import FeatureSection from './components/FeatureSection';
+import Stats from './components/Stats';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-semibold text-indigo-600">
-        Tailwind Centered Test
-      </h1>
-    </main>
+    <div className="min-h-screen bg-[#fafbfc] text-slate-900 flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
+      {/* Navigation Bar */}
+      <Navbar />
+
+      {/* Hero Section */}
+      <main className="flex-grow">
+        <Hero />
+
+        {/* Feature Information & Image Combination Showcase */}
+        <FeatureSection />
+
+        {/* Key SLA & Telemetry Metrics Banner */}
+        <Stats />
+      </main>
+
+      {/* Footer */}
+      <Footer />
+    </div>
   );
 }
