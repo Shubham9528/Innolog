@@ -1,8 +1,8 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import FeatureSection from './components/FeatureSection';
-import Stats from './components/Stats';
-import Footer from './components/Footer';
+import Navbar from './components/header/Navbar';
+import Hero from './components/landing-page/Hero';
+import FeatureSection from './components/landing-page/FeatureSection';
+import Stats from './components/landing-page/Stats';
+import Footer from './components/footer/Footer';
 
 export default function App() {
   return (

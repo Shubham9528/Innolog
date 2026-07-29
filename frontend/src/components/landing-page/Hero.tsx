@@ -105,7 +105,7 @@ export default function Hero() {
 
             {/* Generated High-Res Dashboard Image */}
             <img
-              src="/hero-dashboard.png"
+              src="/assets/hero-dashboard.png"
               alt="INNOLOG Telemetry & Analytics Dashboard"
               className="w-full h-auto object-cover max-h-[580px]"
             />

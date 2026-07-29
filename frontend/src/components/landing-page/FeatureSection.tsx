@@ -133,7 +133,7 @@ export default function FeatureSection() {
               <div className="absolute -inset-1 bg-gradient-to-r from-indigo-400 to-emerald-400 rounded-2xl opacity-25 blur-md group-hover:opacity-35 transition-opacity" />
               <div className="relative rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden shadow-xl">
                 <img
-                  src="/log-stream.png"
+                  src="/assets/log-stream.png"
                   alt="INNOLOG Log Stream UI"
                   className="w-full h-auto object-cover rounded-2xl"
                 />
@@ -149,7 +149,7 @@ export default function FeatureSection() {
               <div className="absolute -inset-1 bg-gradient-to-r from-violet-400 to-indigo-400 rounded-2xl opacity-25 blur-md group-hover:opacity-35 transition-opacity" />
               <div className="relative rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden shadow-xl">
                 <img
-                  src="/hardware-analytics.png"
+                  src="/assets/hardware-analytics.png"
                   alt="Hardware Telemetry Metrics"
                   className="w-full h-auto object-cover rounded-2xl"
                 />
