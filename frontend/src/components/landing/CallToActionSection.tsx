@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, LogIn } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const CallToActionSection: React.FC = () => {
   return (
@@ -9,20 +10,28 @@ export const CallToActionSection: React.FC = () => {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2 className="font-display text-4xl sm:text-5xl font-extrabold mb-6 tracking-tight">
-          Ready to monitor your autoclave with pure acoustic telemetry?
+          Ready to monitor your autoclave with precision data logging?
         </h2>
         <p className="text-indigo-200 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-          Experience the next generation of sterilization data logging. Explore the interactive acoustic simulator and live telemetry hardware specifications.
+          Experience the next generation of sterilization telemetry. Access real-time temperature, pressure, and automated compliance logging.
         </p>
 
-        <div className="flex justify-center">
-          <a 
-            href="#interactive-demo"
-            className="gradient-accent text-white px-9 py-4 rounded-full text-lg font-bold hover:shadow-2xl hover:shadow-indigo-500/40 transition-all transform hover:-translate-y-1 flex items-center space-x-3 cursor-pointer"
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <Link 
+            to="/signup"
+            className="w-full sm:w-auto gradient-accent text-white px-9 py-4 rounded-full text-base font-bold hover:shadow-2xl hover:shadow-indigo-500/40 transition-all transform hover:-translate-y-1 flex items-center justify-center space-x-3 cursor-pointer"
           >
-            <span>Explore Acoustic Telemetry Simulation</span>
+            <span>Get Started / Create Account</span>
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </Link>
+
+          <Link 
+            to="/login"
+            className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-full text-base font-bold transition-all flex items-center justify-center space-x-2 cursor-pointer"
+          >
+            <span>Sign In</span>
+            <LogIn className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>

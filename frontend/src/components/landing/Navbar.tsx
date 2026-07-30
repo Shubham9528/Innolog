@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Radio, LogIn, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Radio, LogIn, Menu, X, UserPlus } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,7 +14,8 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div 
+          <Link 
+            to="/"
             className="flex items-center space-x-3 cursor-pointer shrink-0" 
             onClick={() => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -27,7 +29,7 @@ export const Navbar: React.FC = () => {
               <span className="font-display font-extrabold text-2xl tracking-tight text-slate-900 leading-none">INNOLOG</span>
               <span className="block text-[10px] font-semibold uppercase tracking-widest text-indigo-600 font-mono mt-0.5">Autoclave Data Logging</span>
             </div>
-          </div>
+          </Link>
 
           {/* Navigation Links */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
@@ -46,13 +48,13 @@ export const Navbar: React.FC = () => {
               <span>Base Station Active</span>
             </div>
             
-            <a 
-              href="#login"
+            <Link 
+              to="/login"
               className="hidden lg:flex gradient-accent text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-indigo-500/25 transition-all transform hover:-translate-y-0.5 items-center space-x-2 cursor-pointer whitespace-nowrap shrink-0"
             >
               <span>Login</span>
               <LogIn className="w-4 h-4" />
-            </a>
+            </Link>
 
             {/* Mobile Menu Toggle Button */}
             <button 
@@ -79,14 +81,23 @@ export const Navbar: React.FC = () => {
             <a href="#compliance" onClick={toggleMobileMenu} className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition-colors">Compliance</a>
             
             <div className="mt-4 pt-4 border-t border-slate-100 flex flex-col space-y-3">
-              <a 
-                href="#login"
+              <Link 
+                to="/login"
                 onClick={toggleMobileMenu}
                 className="w-full gradient-accent text-white px-4 py-3 rounded-xl text-base font-semibold shadow-md flex items-center justify-center space-x-2 cursor-pointer"
               >
                 <span>Login</span>
                 <LogIn className="w-5 h-5" />
-              </a>
+              </Link>
+
+              <Link 
+                to="/signup"
+                onClick={toggleMobileMenu}
+                className="w-full bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-3 rounded-xl text-base font-semibold flex items-center justify-center space-x-2 cursor-pointer transition-colors"
+              >
+                <span>Create Account</span>
+                <UserPlus className="w-5 h-5" />
+              </Link>
               
               <div className="sm:hidden flex items-center justify-center space-x-2 px-4 py-3 rounded-xl bg-emerald-50 text-emerald-700 text-sm font-semibold">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
