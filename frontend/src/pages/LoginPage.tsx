@@ -14,8 +14,8 @@ import {
 
 export const LoginPage: React.FC = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('admin');
+  const [password, setPassword] = useState('pass123');
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -27,31 +27,31 @@ export const LoginPage: React.FC = () => {
     setError(null);
 
     if (!email.trim() || !password.trim()) {
-      setError('Please enter both email address and password.');
+      setError('Please enter both username/email address and password.');
       return;
     }
 
     setIsLoading(true);
 
-    // Simulate authentication API call
+    // Static authentication check
     setTimeout(() => {
-      setIsLoading(false);
-      setSuccess(true);
-      setTimeout(() => {
-        // Navigate to landing page or dashboard
-        navigate('/');
-      }, 1200);
-    }, 1000);
+      const cleanEmail = email.trim().toLowerCase();
+      if ((cleanEmail === 'admin' || cleanEmail === 'admin@innolog.io') && password === 'pass123') {
+        setIsLoading(false);
+        setSuccess(true);
+        setTimeout(() => {
+          navigate('/dashboard');
+        }, 800);
+      } else {
+        setIsLoading(false);
+        setError('Invalid credentials. Use user: admin and pass: pass123');
+      }
+    }, 600);
   };
 
   const handleFillDemo = (role: 'admin' | 'user') => {
-    if (role === 'admin') {
-      setEmail('admin@innolog.io');
-      setPassword('AdminPass123!');
-    } else {
-      setEmail('operator@innolog.io');
-      setPassword('UserPass123!');
-    }
+    setEmail(role === 'admin' ? 'admin' : 'user');
+    setPassword('pass123');
   };
 
   return (
@@ -129,7 +129,7 @@ export const LoginPage: React.FC = () => {
             {/* Email Address */}
             <div>
               <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-1.5">
-                Email Address
+                Username / Email
               </label>
               <div className="relative rounded-xl shadow-sm">
                 <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -138,12 +138,12 @@ export const LoginPage: React.FC = () => {
                 <input
                   id="email"
                   name="email"
-                  type="email"
-                  autoComplete="email"
+                  type="text"
+                  autoComplete="username"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="operator@innolog.io"
+                  placeholder="admin"
                   className="block w-full pl-10 pr-4 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:border-transparent text-sm transition-all"
                 />
               </div>
