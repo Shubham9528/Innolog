@@ -1,5 +1,7 @@
 import React from 'react';
 import { Sparkles, Cpu, CheckCircle2, Activity } from 'lucide-react';
+import transducerHardwareImg from '../../assets/transducer_hardware.png';
+import acousticPropagationImg from '../../assets/acoustic_propagation.png';
 
 export const ProjectOverviewSection: React.FC = () => {
   return (
@@ -76,7 +78,7 @@ export const ProjectOverviewSection: React.FC = () => {
             <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-2xl blur opacity-20 group-hover:opacity-35 transition duration-500"></div>
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-xl">
               <img 
-                src="/images/transducer_hardware.png" 
+                src={transducerHardwareImg} 
                 alt="INNOLOG Data Logger & Autoclave Hardware Module" 
                 className="w-full h-72 sm:h-88 lg:h-96 object-cover transform group-hover:scale-105 transition duration-500"
               />
@@ -98,7 +100,7 @@ export const ProjectOverviewSection: React.FC = () => {
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-2xl blur opacity-20 group-hover:opacity-35 transition duration-500"></div>
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-xl">
               <img 
-                src="/images/acoustic_propagation.png" 
+                src={acousticPropagationImg} 
                 alt="Real-Time Data Streaming & Telemetry Pipeline" 
                 className="w-full h-72 sm:h-88 lg:h-96 object-cover transform group-hover:scale-105 transition duration-500"
               />
