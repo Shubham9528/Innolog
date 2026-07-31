@@ -8,8 +8,7 @@ import {
   ArrowLeft, 
   LogIn, 
   CheckCircle2, 
-  AlertCircle,
-  ShieldCheck
+  AlertCircle
 } from 'lucide-react';
 
 export const LoginPage: React.FC = () => {
@@ -49,11 +48,6 @@ export const LoginPage: React.FC = () => {
     }, 600);
   };
 
-  const handleFillDemo = (role: 'admin' | 'user') => {
-    setEmail(role === 'admin' ? 'admin' : 'user');
-    setPassword('pass123');
-  };
-
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden selection:bg-indigo-500 selection:text-white">
       {/* Ambient background glow accents */}
@@ -86,30 +80,6 @@ export const LoginPage: React.FC = () => {
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md relative z-10 px-4 sm:px-0">
         <div className="bg-white/90 backdrop-blur-xl py-8 px-6 sm:px-10 shadow-2xl shadow-slate-200/80 border border-slate-200/90 rounded-3xl">
           
-          {/* Quick Demo Credentials Pill Bar */}
-          <div className="mb-6 bg-slate-50 border border-slate-200/80 p-3 rounded-2xl">
-            <div className="text-[11px] font-semibold uppercase tracking-wider text-slate-500 mb-2 flex items-center justify-between">
-              <span>Quick Demo Fill:</span>
-              <ShieldCheck className="w-3.5 h-3.5 text-indigo-600" />
-            </div>
-            <div className="grid grid-cols-2 gap-2">
-              <button
-                type="button"
-                onClick={() => handleFillDemo('admin')}
-                className="text-xs bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200/80 py-1.5 px-3 rounded-xl font-medium transition-colors text-center"
-              >
-                Admin Account
-              </button>
-              <button
-                type="button"
-                onClick={() => handleFillDemo('user')}
-                className="text-xs bg-cyan-50 hover:bg-cyan-100 text-cyan-700 border border-cyan-200/80 py-1.5 px-3 rounded-xl font-medium transition-colors text-center"
-              >
-                Operator Account
-              </button>
-            </div>
-          </div>
-
           {/* Feedback Banners */}
           {error && (
             <div className="mb-6 p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 text-sm flex items-start space-x-3">
@@ -143,7 +113,7 @@ export const LoginPage: React.FC = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="admin"
+                  placeholder="Enter username or email"
                   className="block w-full pl-10 pr-4 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:border-transparent text-sm transition-all"
                 />
               </div>
