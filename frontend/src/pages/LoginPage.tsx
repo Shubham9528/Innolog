@@ -8,7 +8,8 @@ import {
   ArrowLeft, 
   LogIn, 
   CheckCircle2, 
-  AlertCircle
+  AlertCircle,
+  Radio
 } from 'lucide-react';
 
 export const LoginPage: React.FC = () => {
@@ -80,6 +81,19 @@ export const LoginPage: React.FC = () => {
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md relative z-10 px-4 sm:px-0">
         <div className="bg-white/90 backdrop-blur-xl py-8 px-6 sm:px-10 shadow-2xl shadow-slate-200/80 border border-slate-200/90 rounded-3xl">
           
+          {/* Logo */}
+          <div className="flex justify-center mb-8">
+            <div className="flex items-center space-x-3 shrink-0">
+              <div className="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center shadow-md shadow-indigo-500/20">
+                <Radio className="text-white w-5 h-5 animate-pulse" />
+              </div>
+              <div className="text-left">
+                <span className="font-display font-extrabold text-2xl tracking-tight text-slate-900 leading-none block">INNOLOG</span>
+                {/* <span className="block text-[10px] font-semibold uppercase tracking-widest text-indigo-600 font-mono mt-0.5">Autoclave Data Logging</span> */}
+              </div>
+            </div>
+          </div>
+
           {/* Feedback Banners */}
           {error && (
             <div className="mb-6 p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 text-sm flex items-start space-x-3">
