@@ -150,10 +150,10 @@ export const ShowcaseSection: React.FC = () => {
             {/* Quick Action Link */}
             <div className="pt-2">
               <a 
-                href="#interactive-demo" 
+                href="#features" 
                 className="inline-flex items-center space-x-2 text-indigo-600 hover:text-indigo-700 text-sm font-semibold transition-colors group cursor-pointer"
               >
-                <span>Test live data logging in interactive demo</span>
+                <span>Explore all continuous logging features</span>
                 <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
             </div>

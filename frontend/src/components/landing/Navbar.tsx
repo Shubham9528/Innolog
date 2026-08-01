@@ -35,7 +35,6 @@ export const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             <a href="#project-overview" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">Overview</a>
             <a href="#features" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">Features</a>
-            <a href="#interactive-demo" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">Live Simulation</a>
             <a href="#how-it-works" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">Architecture</a>
             <a href="#specs" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">Specs</a>
             <a href="#compliance" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">Compliance</a>
@@ -75,7 +74,6 @@ export const Navbar: React.FC = () => {
           <div className="px-4 pt-4 pb-6 space-y-2">
             <a href="#project-overview" onClick={toggleMobileMenu} className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition-colors">Overview</a>
             <a href="#features" onClick={toggleMobileMenu} className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition-colors">Features</a>
-            <a href="#interactive-demo" onClick={toggleMobileMenu} className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition-colors">Live Simulation</a>
             <a href="#how-it-works" onClick={toggleMobileMenu} className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition-colors">Architecture</a>
             <a href="#specs" onClick={toggleMobileMenu} className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition-colors">Specs</a>
             <a href="#compliance" onClick={toggleMobileMenu} className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition-colors">Compliance</a>

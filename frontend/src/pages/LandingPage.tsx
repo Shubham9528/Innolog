@@ -5,7 +5,6 @@ import {
   ShowcaseSection,
   FeaturesSection,
   ProjectOverviewSection,
-  InteractiveDemoSection,
   ArchitectureSection,
   SpecsSection,
   ComplianceSection,
@@ -21,7 +20,6 @@ const LandingPage: React.FC = () => {
       <ShowcaseSection />
       <FeaturesSection />
       <ProjectOverviewSection />
-      <InteractiveDemoSection />
       <ArchitectureSection />
       <SpecsSection />
       <ComplianceSection />

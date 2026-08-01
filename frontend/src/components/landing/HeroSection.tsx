@@ -34,11 +34,11 @@ export const HeroSection: React.FC = () => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <a 
-              href="#interactive-demo"
+              href="#project-overview"
               className="w-full sm:w-auto gradient-accent text-white px-8 py-4 rounded-full text-base font-semibold hover:shadow-xl hover:shadow-indigo-500/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-3 cursor-pointer"
             >
               <Play className="w-5 h-5" />
-              <span>Logging Demo</span>
+              <span>Explore System</span>
               <ArrowRight className="w-5 h-5" />
             </a>
 
