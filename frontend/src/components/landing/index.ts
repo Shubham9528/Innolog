@@ -4,6 +4,7 @@ export { ShowcaseSection } from './ShowcaseSection';
 export { FeaturesSection } from './FeaturesSection';
 export { ProjectOverviewSection } from './ProjectOverviewSection';
 export { ArchitectureSection } from './ArchitectureSection';
+export { DataIntegritySection } from './DataIntegritySection';
 export { SpecsSection } from './SpecsSection';
 export { ComplianceSection } from './ComplianceSection';
 export { CallToActionSection } from './CallToActionSection';

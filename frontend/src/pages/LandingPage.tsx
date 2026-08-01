@@ -6,6 +6,7 @@ import {
   FeaturesSection,
   ProjectOverviewSection,
   ArchitectureSection,
+  DataIntegritySection,
   SpecsSection,
   ComplianceSection,
   CallToActionSection,
@@ -21,6 +22,7 @@ const LandingPage: React.FC = () => {
       <FeaturesSection />
       <ProjectOverviewSection />
       <ArchitectureSection />
+      <DataIntegritySection />
       <SpecsSection />
       <ComplianceSection />
       <CallToActionSection />
